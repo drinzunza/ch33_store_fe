@@ -1,0 +1,20 @@
+.product {
+    border: 1px solid #b7bbbe;
+    border-radius: 5px;
+    width: 220px;
+    display: inline-block;
+    margin-right: 15px;
+
+    padding: 10px;
+}
+
+.product:hover {
+    border-color: rgb(202, 73, 53);
+    box-shadow: 1px 1px 6px 3px rgb(144, 144, 144);
+}
+
+.product h5 {
+    margin: 0 0 5px 0;
+    font-size: 20px;
+    font-weight: 400;
+}
