@@ -1,27 +1,29 @@
+import { useEffect, useState } from 'react';
 import Product from '../components/product';
-import "./catalog.css";
+import DataService from '../services/dataService';
+import './catalog.css';
 
 function Catalog() {
-    return (
-        <div className="catalog">
-            <h3>Check our amazing products!</h3>
+    const [products, setProducts]= useState([]);
 
-            <div className="products">
-                <Product />
-                <Product />
-                <Product />
-            </div>
-        </div>
-    );
+  // when the component loads
+  useEffect(() => {
+    console.log("catalog loaded");
+    let service = new DataService();
+    let prodList = service.getCatalog();
+    setProducts(prodList);
+  }, []);
+
+  return (
+    <div className="catalog">
+      <h3>Check our amazing products!</h3>
+      <h5>We have {products.length} amazing items for you</h5>
+
+      <div className="products">
+       { products.map( prod => <Product title={prod.title} /> )  }
+      </div>
+    </div>
+  );
 }
 
 export default Catalog;
-
-/**
- * Product
- * 
- * title > h5
- * price > label
- * quantity picker
- * button to add to cart
- */

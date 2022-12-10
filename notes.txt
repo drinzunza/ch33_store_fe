@@ -3,3 +3,16 @@ git init
 
 # add the remote url
 git remote add origin <URL>
+
+
+# create a local copy
+git add .
+git commit -m "MESSAGE"
+
+
+# Push /upload
+    # first push:
+    git push -u origin master 
+
+    # next time
+    git push
