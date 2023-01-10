@@ -1,10 +1,10 @@
 .product {
     border: 1px solid #b7bbbe;
     border-radius: 5px;
-    width: 220px;
+    width: 250px;
     display: inline-block;
     margin-right: 15px;
-
+    margin-bottom: 15px;
     padding: 10px;
 }
 
@@ -17,4 +17,19 @@
     margin: 0 0 5px 0;
     font-size: 20px;
     font-weight: 400;
+}
+
+.product img{
+    width: 230px;
+    height: 230px;
+}
+
+.product .prices {
+    display: flex;
+    justify-content: space-around;
+}
+
+.product .controls {
+    display: flex;
+    justify-content: space-around;
 }

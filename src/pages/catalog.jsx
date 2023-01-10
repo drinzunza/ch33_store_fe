@@ -20,7 +20,7 @@ function Catalog() {
       <h5>We have {products.length} amazing items for you</h5>
 
       <div className="products">
-       { products.map( prod => <Product title={prod.title} /> )  }
+       { products.map( prod => <Product data={prod} /> )  }
       </div>
     </div>
   );
